@@ -203,7 +203,7 @@
         }
         if(refresh === true || ts + cache_time < now)
         {
-            $.fn.blockstrap.api.market('multi', '', function(results)
+            $.fn.blockstrap.api.market('nav', '', function(results)
             {
                 localStorage.setItem('nw_market_conditions', JSON.stringify({ts: now, data:results}));
                 markets.update(results, callback);

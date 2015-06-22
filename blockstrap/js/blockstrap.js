@@ -518,13 +518,14 @@ var blockstrap_core = function()
                 {
                     var select = $(this);
                     var hd = false;
-                    var prepend = false;
+                    var prepend = true;
                     var blockchains = $.fn.blockstrap.settings.blockchains;
-                    if($(select).hasClass('hd')) hd = true;
-                    if($(select).hasClass('prepend')) prepend = true;
+                    if($(select).hasClass('hd')) hd = false;
+                    if($(select).hasClass('prepend')) prepend = false;
                     $(select).html('');
                     if($.isPlainObject(blockchains))
                     {
+			console.log(blockchains);
                         if(prepend === true && hd === true)
                         {
                             $(select).append('<option value="hd">-- HD (All Chains) --</option>');
@@ -535,8 +536,12 @@ var blockstrap_core = function()
                         }
                         $.each(blockchains, function(blockchain, v)
                         {
+			    console.log(v);
+			    console.log(typeof(v.private));
                             if(typeof v.private == 'undefined')
                             {
+				console.log(typeof(v.apis[$.fn.blockstrap.settings.api_service]));
+				console.log($.fn.blockstrap.settings.api_service);
                                 if(typeof v.apis[$.fn.blockstrap.settings.api_service] != 'undefined')
                                 {
                                     $(select).append('<option value="'+blockchain+'">'+v.blockchain+'</option>');
@@ -1541,7 +1546,7 @@ var blockstrap_core = function()
                         {
                             $.each(bs.settings.blockchains, function(blockchain, values)
                             {
-                                if(blockchain != 'multi')
+                                if(blockchain != 'nav')
                                 {
                                     $.each(values.apis, function(provider, url)
                                     {
@@ -1561,7 +1566,7 @@ var blockstrap_core = function()
                                                 full_results[provider].addresses = true;
                                             }
                                             var api_markets = $.fn.blockstrap.api.settings(
-                                                'multi', 
+                                                'nav', 
                                                 provider, 
                                                 'to', 
                                                 'market'

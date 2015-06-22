@@ -18,7 +18,7 @@
     "module_base": "js/modules/",
     "page_base": "index",
     "slug_base": "dashboard",
-    "api_service": "blockstrap",
+    "api_service": "insight",
     "base_url": "",
     "app_id": "framework",
     "content_id": "main-content",
@@ -111,14 +111,7 @@
         {
             "name": "Blockstrap Donations",
             "blockchains": {
-                "btc": ["1GjHvbkCyYpy3uaNPvHsxe2EptH2RxEvMt"],
-                "dash": ["Xhp3RfQKVCsqju3VEcHuMwcMPNbLszEGJG"],
-                "doge": ["DJHXpkQGcRydRvocWaeUtZir6c2pXHkUn4"],
-                "ltc": ["LbGtaXcsPDQpU6pA8k3sTDmCaG5qFUPAhP"],
-                "btct": ["miNyrRGBZkyVxw1RoKMLpEagCcftVQJD22"],
-                "dasht": ["y67MSj12Wm9YJA4291VPpnC8pGS128tH4J"],
-                "doget": ["ncq5H5EdCwmGVtQtquk2TKyXDTNApoDpwq"],
-                "ltct": ["moyssLnSTs6EBWDoyRMaXkUKnDmLCSXBte"]
+                "nav": ["1GjHvbkCyYpy3uaNPvHsxe2EptH2RxEvMt"]
             },
             "contact_dnk": false
         }
@@ -130,7 +123,7 @@
                 "results": {
                     "address": "1Nz5RqevRodefPyGVB8EpdwSEGS4Ax2f1k",
                     "balance": 10019000,
-                    "blockchain": "btc",
+                    "blockchain": "nav",
                     "hash": "f1260c3cd86ecc03ce460c303ec0e8006e32273d",
                     "received": 10019000,
                     "tx_count": 2
@@ -145,7 +138,7 @@
                     {
                         "address": "1121cQLqCsDsLPAkJW5ddTCREZ7Bp4ufrk",
                         "balance": 0,
-                        "blockchain": "btc",
+                        "blockchain": "nav",
                         "hash": "0030ececbad05ffcdff89f3f26e38ca3d735a8de",
                         "received": 5000000000,
                         "tx_count": 2
@@ -153,7 +146,7 @@
                     {
                         "address": "12higDjoCCNXSA95xZMWUdPvXNmkAduhWv",
                         "balance": 1,
-                        "blockchain": "btc",
+                        "blockchain": "nav",
                         "hash": "12ab8dc588ca9d5787dde7eb29569da63c3a238c",
                         "received": 7764439255613,
                         "tx_count": 78
@@ -163,7 +156,7 @@
             "block": {
                 "request": "15968",
                 "results": {
-                    "blockchain": "btc",
+                    "blockchain": "nav",
                     "hash": "00000000201016a83272835468d457d15965d57f57c0da5944dc94ea9389f360",
                     "height": 15968,
                     "next": "0000000037d7c9885177df7af395d2e99b176a9372a03b855abdf2c9adac90b1",
@@ -180,7 +173,7 @@
                 "request": "06032a172f88ba823785f87341eab26ee7a2eb2de9d2f105220d6580e3affc16",
                 "results": {
                     "block": 15968,
-                    "blockchain": "btc",
+                    "blockchain": "nav",
                     "fees": 0,
                     "input": 300000000000,
                     "output": 300000000000,
@@ -195,7 +188,7 @@
                 "results": [
                     {
                         "block": 317958,
-                        "blockchain": "btc",
+                        "blockchain": "nav",
                         "fees": 10000,
                         "input": 1030000,
                         "output": 1020000,
@@ -206,7 +199,7 @@
                     },
                     {
                         "block": 317957,
-                        "blockchain": "btc",
+                        "blockchain": "nav",
                         "fees": 0,
                         "input": 25000000,
                         "output": 25000000,
@@ -254,7 +247,7 @@
     },
     "exchange": {
         "usd": {
-            "btc": 367.35,
+            "nav": 367.35,
             "ltc": 3.57,
             "doge": 0.00022388,
             "btct": 0,
@@ -277,107 +270,20 @@
         }
     },
     "blockchains": {
-        "btct": {
-            "blockchain": "Bitcoin Testnet",
-            "lib": "bitcointestnet",
+        "nav": {
+            "blockchain": "Navajocoin",
+            "lib": "navajocoin",
             "apis": {
-                "blockstrap": "https://api.blockstrap.com/v0/btct/",
-                "insight": "https://chain.so/api/v2/",
-                "blockr": "http://tbtc.blockr.io/api/v1/"
+                "insight": "https://mainnet.helloblock.io/v1/"
             },
             "fee": 0.0001,
-            "op_return": true,
-            "op_limit": 80
-        },
-        "dasht": {
-            "blockchain": "DashPay Testnet",
-            "lib": "dashpaytestnet",
-            "apis": {
-                "blockstrap": "https://api.blockstrap.com/v0/dasht/"
-            },
-            "fee": 0.0001,
-            "op_return": true,
-            "op_limit": 80
-        },
-        "doget": {
-            "blockchain": "Dogecoin Testnet",
-            "lib": "dogecointestnet",
-            "apis": {
-                "blockstrap": "https://api.blockstrap.com/v0/dogt/",
-                "insight": "https://chain.so/api/v2/"
-            },
-            "fee": 1,
-            "op_return": true,
-            "op_limit": 80
-        },
-        "ltct": {
-            "blockchain": "Litecoin Testnet",
-            "lib": "litecointestnet",
-            "apis": {
-                "blockstrap": "https://api.blockstrap.com/v0/ltct/",
-                "insight": "https://chain.so/api/v2/"
-            },
-            "fee": 0.001,
-            "op_return": true,
-            "op_limit": 80
-        },
-        "multi": {
-            "private": true,
-            "apis": {
-                "blockstrap": "https://api.blockstrap.com/v0/multi/"
-            }
-        },
-        "btc": {
-            "blockchain": "Bitcoin",
-            "lib": "bitcoin",
-            "apis": {
-                "helloblock": "https://mainnet.helloblock.io/v1/",
-                "blockstrap": "https://api.blockstrap.com/v0/btc/",
-                "insight": "https://chain.so/api/v2/",
-                "blockr": "http://btc.blockr.io/api/v1/"
-            },
-            "fee": 0.0001,
-            "op_return": true,
-            "op_limit": 80
-        },
-        "dash": {
-            "blockchain": "DashPay",
-            "lib": "dashpay",
-            "apis": {
-                "blockstrap": "https://api.blockstrap.com/v0/dash/"
-            },
-            "fee": 0.0001,
-            "op_return": true,
-            "op_limit": 80
-        },
-        "doge": {
-            "blockchain": "Dogecoin",
-            "lib": "dogecoin",
-            "apis": {
-                "blockstrap": "https://api.blockstrap.com/v0/doge/",
-                "insight": "https://chain.so/api/v2/",
-                "blockr": "http://dgc.blockr.io/api/v1/"
-            },
-            "fee": 1,
-            "op_return": true,
-            "op_limit": 80
-        },
-        "ltc": {
-            "blockchain": "Litecoin",
-            "lib": "litecoin",
-            "apis": {
-                "blockstrap": "https://api.blockstrap.com/v0/ltc/",
-                "insight": "https://chain.so/api/v2/",
-                "blockr": "http://ltc.blockr.io/api/v1/"
-            },
-            "fee": 0.001,
             "op_return": true,
             "op_limit": 80
         }
     },
     "apis": {
         "defaults": {
-            "blockstrap": {
+            "insight": {
                 "functions": {
                     "to": {
                         "address": "address/transactions/",
@@ -474,85 +380,10 @@
                         }
                     }
                 }
-            },
-            "blockr": {
-                "functions": {
-                    "to": {
-                        "address": "address/info/",
-                        "block": "block/info/",
-                        "relay": "tx/push/",
-                        "relay_param": "hex",
-                        "transaction": "tx/info/",
-                        "transactions": "address/txs/",
-                        "unspents": "address/unspent/"
-                    },
-                    "from": {
-                        "address": {
-                            "key": "",
-                            "address": "address",
-                            "hash": "[address, hextohash]",
-                            "tx_count": "nb_txs",
-                            "received": "[totalreceived, float]",
-                            "balance": "[balance, float]"
-                        },
-                        "addresses": {
-                            "key": "",
-                            "delimiter": ",",
-                            "address": "address",
-                            "hash": "[address, hextohash]",
-                            "tx_count": "nb_txs",
-                            "received": "[totalreceived, float]",
-                            "balance": "[balance, float]"
-                        },
-                        "block": {
-                            "key": "",
-                            "height": "nb",
-                            "hash": "hash",
-                            "prev": "prev_block_hash",
-                            "next": "next_block_hash",
-                            "tx_count": "nb_txs",
-                            "time": "[time_utc, utctoepoch]"
-                        },
-                        "relay": {
-                            "txid": "",
-                            "inner": ""
-                        },
-                        "transaction": {
-                            "key": "",
-                            "txid": "tx",
-                            "size": "",
-                            "block": "block",
-                            "time": "[time_utc, utctoepoch]",
-                            "input": "",
-                            "output": "",
-                            "value": "",
-                            "fees": "[fee, float]"
-                        },
-                        "transactions": {
-                            "key": ".txs",
-                            "txid": "tx",
-                            "size": "",
-                            "block": "",
-                            "time": "[time_utc, utc_to_epoch]",
-                            "input": "",
-                            "output": "",
-                            "value": "",
-                            "fees": "[fee, float]"
-                        },
-                        "unspents": {
-                            "key": ".unspent",
-                            "confirmations": "confirmations",
-                            "txid": "tx",
-                            "index": "n",
-                            "value": "[amount, float]",
-                            "script": "script"
-                        }
-                    }
-                }
             }
-        },
-        "btc": {
-            "helloblock": {
+	},
+        "nav": {
+            "insight": {
                 "functions": {
                     "to": {
                         "address": "addresses/",
@@ -626,471 +457,6 @@
                             "index": "index",
                             "value": "value",
                             "script": "scriptPubKey"
-                        }
-                    }
-                }
-            },
-            "insight": {
-                "functions": {
-                    "to": {
-                        "address": "address/BTC/",
-                        "addresses": "",
-                        "transaction": "tx/BTC/",
-                        "transactions": "address/BTC/",
-                        "block": "block/BTC/",
-                        "relay": "send_tx/BTC/",
-                        "relay_param": "tx_hex",
-                        "unspents": "get_tx_unspent/BTC/"
-                    },
-                    "from": {
-                        "address": {
-                            "key": "",
-                            "address": "address",
-                            "hash": "[address, hextohash]",
-                            "tx_count": "total_txs",
-                            "received": "[received_value, float]",
-                            "balance": "[balance, float]"
-                        },
-                        "addresses": {
-                            "key": "",
-                            "address": "",
-                            "hash": "",
-                            "tx_count": "",
-                            "received": "",
-                            "balance": ""
-                        },
-                        "block": {
-                            "key": "",
-                            "height": "block_no",
-                            "hash": "blockhash",
-                            "prev": "previous_blockhash",
-                            "next": "next_blockhash",
-                            "tx_count": "[txs, count]",
-                            "time": "time"
-                        },
-                        "relay": {
-                            "txid": "tx_hex",
-                            "inner": "transaction"
-                        },
-                        "transaction": {
-                            "key": "",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "[sent_value, float]",
-                            "fees": "[fee, float]"
-                        },
-                        "transactions": {
-                            "key": ".txs",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "",
-                            "fees": ""
-                        },
-                        "unspents": {
-                            "key": ".txs",
-                            "reverse_array": true,
-                            "confirmations": "confirmations",
-                            "txid": "txid",
-                            "index": "output_no",
-                            "value": "[value, float]",
-                            "script": "script_hex"
-                        }
-                    }
-                }
-            }
-        },
-        "ltc": {
-            "insight": {
-                "functions": {
-                    "to": {
-                        "address": "address/LTC/",
-                        "addresses": "",
-                        "transaction": "tx/LTC/",
-                        "transactions": "",
-                        "block": "block/LTC/",
-                        "relay": "send_tx/LTC/",
-                        "relay_param": "tx_hex",
-                        "unspents": "get_tx_unspent/LTC/"
-                    },
-                    "from": {
-                        "address": {
-                            "key": "",
-                            "address": "address",
-                            "hash": "",
-                            "tx_count": "total_txs",
-                            "received": "received_value",
-                            "balance": "balance"
-                        },
-                        "addresses": {
-                            "key": "",
-                            "address": "",
-                            "hash": "",
-                            "tx_count": "",
-                            "received": "",
-                            "balance": ""
-                        },
-                        "transaction": {
-                            "key": "",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "sent_value",
-                            "fees": "fee"
-                        },
-                        "transactions": {
-                            "key": "",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "sent_value",
-                            "fees": "fee"
-                        },
-                        "block": {
-                            "key": "",
-                            "height": "block_no",
-                            "hash": "blockhash",
-                            "prev": "previous_blockhash",
-                            "next": "next_blockhash",
-                            "tx_count": "",
-                            "time": "time"
-                        },
-                        "relay": {
-                            "txid": "tx_hex",
-                            "inner": "transaction"
-                        },
-                        "unspents": {
-                            "key": ".txs",
-                            "confirmations": "confirmations",
-                            "txid": "txid",
-                            "index": "output_no",
-                            "value": "value",
-                            "script": "script_hex"
-                        }
-                    }
-                }
-            }
-        },
-        "doge": {
-            "insight": {
-                "functions": {
-                    "to": {
-                        "address": "address/DOGE/",
-                        "addresses": "",
-                        "transaction": "tx/DOGE/",
-                        "transactions": "",
-                        "block": "block/DOGE/",
-                        "relay": "send_tx/DOGE/",
-                        "relay_param": "tx_hex",
-                        "unspents": "get_tx_unspent/DOGE/"
-                    },
-                    "from": {
-                        "address": {
-                            "key": "",
-                            "address": "address",
-                            "hash": "[address, hextohash]",
-                            "tx_count": "total_txs",
-                            "received": "[received_value, float]",
-                            "balance": "[balance, float]"
-                        },
-                        "addresses": {
-                            "key": "",
-                            "address": "",
-                            "hash": "",
-                            "tx_count": "",
-                            "received": "",
-                            "balance": ""
-                        },
-                        "block": {
-                            "key": "",
-                            "height": "block_no",
-                            "hash": "blockhash",
-                            "prev": "previous_blockhash",
-                            "next": "next_blockhash",
-                            "tx_count": "[txs, count]",
-                            "time": "time"
-                        },
-                        "relay": {
-                            "txid": "tx_hex",
-                            "inner": "transaction"
-                        },
-                        "transaction": {
-                            "key": "",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "[sent_value, float]",
-                            "fees": "[fee, float]"
-                        },
-                        "transactions": {
-                            "key": ".txs",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "",
-                            "fees": ""
-                        },
-                        "unspents": {
-                            "key": ".txs",
-                            "reverse_array": true,
-                            "confirmations": "confirmations",
-                            "txid": "txid",
-                            "index": "output_no",
-                            "value": "[value, float]",
-                            "script": "script_hex"
-                        }
-                    }
-                }
-            }
-        },
-        "btct": {
-            "insight": {
-                "functions": {
-                    "to": {
-                        "address": "address/BTCTEST/",
-                        "addresses": "",
-                        "transaction": "tx/BTCTEST/",
-                        "transactions": "",
-                        "block": "block/BTCTEST/",
-                        "relay": "send_tx/BTCTEST/",
-                        "relay_param": "tx_hex",
-                        "unspents": "get_tx_unspent/BTCTEST/"
-                    },
-                    "from": {
-                        "address": {
-                            "key": "",
-                            "address": "address",
-                            "hash": "[address, hextohash]",
-                            "tx_count": "total_txs",
-                            "received": "[received_value, float]",
-                            "balance": "[balance, float]"
-                        },
-                        "addresses": {
-                            "key": "",
-                            "address": "",
-                            "hash": "",
-                            "tx_count": "",
-                            "received": "",
-                            "balance": ""
-                        },
-                        "block": {
-                            "key": "",
-                            "height": "block_no",
-                            "hash": "blockhash",
-                            "prev": "previous_blockhash",
-                            "next": "next_blockhash",
-                            "tx_count": "[txs, count]",
-                            "time": "time"
-                        },
-                        "relay": {
-                            "txid": "tx_hex",
-                            "inner": "transaction"
-                        },
-                        "transaction": {
-                            "key": "",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "[sent_value, float]",
-                            "fees": "[fee, float]"
-                        },
-                        "transactions": {
-                            "key": ".txs",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "",
-                            "fees": ""
-                        },
-                        "unspents": {
-                            "key": ".txs",
-                            "reverse_array": true,
-                            "confirmations": "confirmations",
-                            "txid": "txid",
-                            "index": "output_no",
-                            "value": "[value, float]",
-                            "script": "script_hex"
-                        }
-                    }
-                }
-            }
-        },
-        "ltct": {
-            "insight": {
-                "functions": {
-                    "to": {
-                        "address": "address/LTCTEST/",
-                        "addresses": "",
-                        "transaction": "tx/LTCTEST/",
-                        "transactions": "",
-                        "block": "block/LTCTEST/",
-                        "relay": "send_tx/LTCTEST/",
-                        "relay_param": "tx_hex",
-                        "unspents": "get_tx_unspent/LTCTEST/"
-                    },
-                    "from": {
-                        "address": {
-                            "key": "",
-                            "address": "address",
-                            "hash": "[address, hextohash]",
-                            "tx_count": "total_txs",
-                            "received": "[received_value, float]",
-                            "balance": "[balance, float]"
-                        },
-                        "addresses": {
-                            "key": "",
-                            "address": "",
-                            "hash": "",
-                            "tx_count": "",
-                            "received": "",
-                            "balance": ""
-                        },
-                        "block": {
-                            "key": "",
-                            "height": "block_no",
-                            "hash": "blockhash",
-                            "prev": "previous_blockhash",
-                            "next": "next_blockhash",
-                            "tx_count": "[txs, count]",
-                            "time": "time"
-                        },
-                        "relay": {
-                            "txid": "tx_hex",
-                            "inner": "transaction"
-                        },
-                        "transaction": {
-                            "key": "",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "[sent_value, float]",
-                            "fees": "[fee, float]"
-                        },
-                        "transactions": {
-                            "key": ".txs",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "",
-                            "fees": ""
-                        },
-                        "unspents": {
-                            "key": ".txs",
-                            "reverse_array": true,
-                            "confirmations": "confirmations",
-                            "txid": "txid",
-                            "index": "output_no",
-                            "value": "[value, float]",
-                            "script": "script_hex"
-                        }
-                    }
-                }
-            }
-        },
-        "doget": {
-            "insight": {
-                "functions": {
-                    "to": {
-                        "address": "address/DOGETEST/",
-                        "addresses": "",
-                        "transaction": "tx/DOGETEST/",
-                        "transactions": "",
-                        "block": "block/DOGETEST/",
-                        "relay": "send_tx/DOGETEST/",
-                        "relay_param": "tx_hex",
-                        "unspents": "get_tx_unspent/DOGETEST/"
-                    },
-                    "from": {
-                        "address": {
-                            "key": "",
-                            "address": "address",
-                            "hash": "[address, hextohash]",
-                            "tx_count": "total_txs",
-                            "received": "[received_value, float]",
-                            "balance": "[balance, float]"
-                        },
-                        "addresses": {
-                            "key": "",
-                            "address": "",
-                            "hash": "",
-                            "tx_count": "",
-                            "received": "",
-                            "balance": ""
-                        },
-                        "block": {
-                            "key": "",
-                            "height": "block_no",
-                            "hash": "blockhash",
-                            "prev": "previous_blockhash",
-                            "next": "next_blockhash",
-                            "tx_count": "[txs, count]",
-                            "time": "time"
-                        },
-                        "relay": {
-                            "txid": "tx_hex",
-                            "inner": "transaction"
-                        },
-                        "transaction": {
-                            "key": "",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "[sent_value, float]",
-                            "fees": "[fee, float]"
-                        },
-                        "transactions": {
-                            "key": ".txs",
-                            "txid": "txid",
-                            "size": "",
-                            "block": "block_no",
-                            "time": "time",
-                            "input": "",
-                            "output": "",
-                            "value": "",
-                            "fees": ""
-                        },
-                        "unspents": {
-                            "key": ".txs",
-                            "reverse_array": true,
-                            "confirmations": "confirmations",
-                            "txid": "txid",
-                            "index": "output_no",
-                            "value": "[value, float]",
-                            "script": "script_hex"
                         }
                     }
                 }
