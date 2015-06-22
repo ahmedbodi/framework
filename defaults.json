@@ -242,15 +242,15 @@
             "markets": 60000
         },
         "accounts": 60000,
-        "dependencies": true,
+        "dependencies": false,
         "modules": true,
         "less": true,
         "bootstrap": true,
-        "plugins": true,
+        "plugins": false,
         "css": true,
-        "config": true,
-        "json": true,
-        "html": true
+        "config": false,
+        "json": false,
+        "html": false
     },
     "exchange": {
         "usd": {
@@ -282,7 +282,7 @@
             "lib": "bitcointestnet",
             "apis": {
                 "blockstrap": "https://api.blockstrap.com/v0/btct/",
-                "sochain": "https://chain.so/api/v2/",
+                "insight": "https://chain.so/api/v2/",
                 "blockr": "http://tbtc.blockr.io/api/v1/"
             },
             "fee": 0.0001,
@@ -304,7 +304,7 @@
             "lib": "dogecointestnet",
             "apis": {
                 "blockstrap": "https://api.blockstrap.com/v0/dogt/",
-                "sochain": "https://chain.so/api/v2/"
+                "insight": "https://chain.so/api/v2/"
             },
             "fee": 1,
             "op_return": true,
@@ -315,7 +315,7 @@
             "lib": "litecointestnet",
             "apis": {
                 "blockstrap": "https://api.blockstrap.com/v0/ltct/",
-                "sochain": "https://chain.so/api/v2/"
+                "insight": "https://chain.so/api/v2/"
             },
             "fee": 0.001,
             "op_return": true,
@@ -333,7 +333,7 @@
             "apis": {
                 "helloblock": "https://mainnet.helloblock.io/v1/",
                 "blockstrap": "https://api.blockstrap.com/v0/btc/",
-                "sochain": "https://chain.so/api/v2/",
+                "insight": "https://chain.so/api/v2/",
                 "blockr": "http://btc.blockr.io/api/v1/"
             },
             "fee": 0.0001,
@@ -355,7 +355,7 @@
             "lib": "dogecoin",
             "apis": {
                 "blockstrap": "https://api.blockstrap.com/v0/doge/",
-                "sochain": "https://chain.so/api/v2/",
+                "insight": "https://chain.so/api/v2/",
                 "blockr": "http://dgc.blockr.io/api/v1/"
             },
             "fee": 1,
@@ -367,7 +367,7 @@
             "lib": "litecoin",
             "apis": {
                 "blockstrap": "https://api.blockstrap.com/v0/ltc/",
-                "sochain": "https://chain.so/api/v2/",
+                "insight": "https://chain.so/api/v2/",
                 "blockr": "http://ltc.blockr.io/api/v1/"
             },
             "fee": 0.001,
@@ -630,7 +630,7 @@
                     }
                 }
             },
-            "sochain": {
+            "insight": {
                 "functions": {
                     "to": {
                         "address": "address/BTC/",
@@ -708,7 +708,7 @@
             }
         },
         "ltc": {
-            "sochain": {
+            "insight": {
                 "functions": {
                     "to": {
                         "address": "address/LTC/",
@@ -785,7 +785,7 @@
             }
         },
         "doge": {
-            "sochain": {
+            "insight": {
                 "functions": {
                     "to": {
                         "address": "address/DOGE/",
@@ -863,7 +863,7 @@
             }
         },
         "btct": {
-            "sochain": {
+            "insight": {
                 "functions": {
                     "to": {
                         "address": "address/BTCTEST/",
@@ -941,7 +941,7 @@
             }
         },
         "ltct": {
-            "sochain": {
+            "insight": {
                 "functions": {
                     "to": {
                         "address": "address/LTCTEST/",
@@ -1019,7 +1019,7 @@
             }
         },
         "doget": {
-            "sochain": {
+            "insight": {
                 "functions": {
                     "to": {
                         "address": "address/DOGETEST/",

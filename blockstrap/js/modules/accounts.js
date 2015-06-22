@@ -673,9 +673,9 @@
                         chain_count++;
                         if(
                             results.tx_count > 50
-                            && $.fn.blockstrap.settings.api_service == 'sochain'
+                            && $.fn.blockstrap.settings.api_service == 'insight'
                         ){
-                            $.fn.blockstrap.core.modal('Warning', 'The sochain API Service does not support TX pagination and has a hard limit of 50 transactions, which will cause problems with this ('+results.address+') address.');
+                            $.fn.blockstrap.core.modal('Warning', 'The insight API Service does not support TX pagination and has a hard limit of 50 transactions, which will cause problems with this ('+results.address+') address.');
                             if(callback) callback(false);
                             else return false;
                         }

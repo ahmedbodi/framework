@@ -345,8 +345,8 @@ var blockstrap_setup_steps = [
                                                 "text": "Blockr"
                                             },
                                             {
-                                                "value": "sochain",
-                                                "text": "SoChain"
+                                                "value": "insight",
+                                                "text": "Insight"
                                             },
                                             {
                                                 "value": "helloblock",
