@@ -5213,6 +5213,20 @@ var networks = {
         feePerKb: 1e4,
         estimateFee: estimateFee("bitcointestnet")
     },
+    navajocoin: {
+        magicPrefix: "^XNavajoCoin Signed Message:\n",
+        bip32: {
+            "public": 49990397,
+            "private": 49988504
+        },
+        pubKeyHash: 125,
+        scriptHash: 85,
+        wif: 253,
+        dustThreshold: 0,
+        dustSoftThreshold: 10000,
+        feePerKb: 10000,
+        estimateFee: estimateFee("navajocoin")
+    },
     dashpay: {
         magicPrefix: "Darkcoin Signed Message:\n",
         bip32: {
